@@ -1,0 +1,21 @@
+{
+  "name": "space-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Space themed portfolio built with React and Vite.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0"
+  }
+}
