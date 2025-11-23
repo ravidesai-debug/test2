@@ -1,6 +1,4 @@
-import React from '../lib/mini-react.js';
-
-const h = React.createElement;
+import React from 'react';
 
 const links = [
   { href: '#experience', label: 'Experience' },
@@ -10,19 +8,19 @@ const links = [
 ];
 
 function NavBar() {
-  return h(
-    'header',
-    { className: 'nav' },
-    h('div', { className: 'nav__logo' }, 'Stellar Portfolio'),
-    h(
-      'nav',
-      null,
-      h(
-        'ul',
-        null,
-        ...links.map((link) => h('li', null, h('a', { href: link.href }, link.label)))
-      )
-    )
+  return (
+    <header className="nav">
+      <div className="nav__logo">Stellar Portfolio</div>
+      <nav>
+        <ul>
+          {links.map((link) => (
+            <li key={link.href}>
+              <a href={link.href}>{link.label}</a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </header>
   );
 }
 

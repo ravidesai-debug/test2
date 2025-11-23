@@ -1,19 +1,15 @@
-import React from '../lib/mini-react.js';
-
-const h = React.createElement;
+import React from 'react';
 
 function SkillGrid({ skills }) {
-  return h(
-    'div',
-    { className: 'skill-grid' },
-    ...skills.map((skill) =>
-      h(
-        'article',
-        { className: 'skill-tile' },
-        h('h3', null, skill.name),
-        h('p', null, skill.details)
-      )
-    )
+  return (
+    <div className="skill-grid">
+      {skills.map((skill) => (
+        <article key={skill.name} className="skill-tile">
+          <h3>{skill.name}</h3>
+          <p>{skill.details}</p>
+        </article>
+      ))}
+    </div>
   );
 }
 

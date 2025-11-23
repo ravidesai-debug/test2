@@ -1,17 +1,15 @@
-import React from '../lib/mini-react.js';
-
-const h = React.createElement;
+import React from 'react';
 
 function TimelineItem({ title, period, description }) {
-  return h(
-    'li',
-    { className: 'timeline-item' },
-    h('div', { className: 'timeline-item__marker' }),
-    h('div', { className: 'timeline-item__content' },
-      h('p', { className: 'timeline-item__period' }, period),
-      h('h3', null, title),
-      h('p', null, description)
-    )
+  return (
+    <li className="timeline-item">
+      <div className="timeline-item__marker" />
+      <div className="timeline-item__content">
+        <p className="timeline-item__period">{period}</p>
+        <h3>{title}</h3>
+        <p>{description}</p>
+      </div>
+    </li>
   );
 }
 
