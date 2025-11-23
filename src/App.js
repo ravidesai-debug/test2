@@ -1,4 +1,4 @@
-import React from 'react';
+import React from './lib/mini-react.js';
 import Section from './components/Section.js';
 import HighlightCard from './components/HighlightCard.js';
 import ProjectCard from './components/ProjectCard.js';
